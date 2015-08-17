@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bluefin-trading</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body>
+    <h1>Just Testing some Modals</h1>
+    <p>Buy some Stocks</p>
+    <button id="orderButton">order now</button>
+    <script type="text/javascript" src="../js/modals.js"></script>
+    <script>
+    window.onload = function() {
+        var button = document.getElementById("orderButton");
+        button.onclick = function() {
+            var json = {
+                 "title": "Order Input",
+                 "inputs": [
+                 {
+                 "label": "Symbol",
+                 "type": "string",
+                 "value": "AAPL",
+                 "required": true
+                 },
+                 {
+                 "label": "Quantity",
+                 "type": "integer",
+                 "value": 1,
+                 "required": true
+                 },
+                 {
+                 "label": "Price",
+                 "type": "float",
+                 "value": 145.67,
+                 "required": true
+                 }
+                 ]
+            }
+            modals.show(json);
+        }
+    }
+    </script>
+</body>
+</html>
