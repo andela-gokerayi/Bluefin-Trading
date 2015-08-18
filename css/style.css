@@ -1,25 +1,77 @@
-body {
-    height:100%;
-    margin:0;
-    padding:0;
+.modal {
+  margin: 0 auto;
+  height: 390px;
+  width: 500px;
+  background: #FCFDFE;
+  border: solid 1px;
+  margin-top: 30px;
 }
 
-#overlay {
-    visibility: hidden;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width:100%;
-    height:100%;
-    text-align:center;
-    z-index: 1000;
+#orderButton {
+  margin-left: 40%;
+  margin-top: 30px;
+  height: 30px;
+  width: 250px;
+  border-radius: 6px;
+  background: #0B1A3B;
+  color: #ffffff;
+  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
+}
+#formHeading {
+  background: #0B1A3B;
+  color: #FCFDFE;
+  overflow: auto;
+}
+#formHeading h3 {
+  margin-left: 30px;
+  font-family: 'Open Sans', sans-serif;
+}
+#form {
+  overflow: auto;
+  height: 250px;
+  overflow: scroll;
+}
+#form h4 {
+  margin-left: 30px;
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 0px;
 }
 
-#overlay div {
-    width:300px;
-    margin: 100px auto;
-    background-color: #fff;
-    border:1px solid #000;
-    padding:15px;
-    text-align:center;
+#formInput {
+  position: relative;
+  bottom: 26px;
+  left: 200px;
+  height: 30px;
+  width: 250px;
+  border-radius: 6px;
+  font-size: 15px;
+}
+hr {
+  margin: 0 auto;
+}
+
+#actionBar {
+  background: #0B1A3B;
+  color: #FCFDFE;
+  overflow: auto;
+  height:80px;
+
+}
+
+#resetBtn {
+  width: 200px;
+  height: 40px;
+  border-radius: 3px;
+  background: #66FFFF;
+  margin-top: 20px;
+  margin-left: 30px;
+}
+
+#okBtn {
+  width: 200px;
+  height: 40px;
+  border-radius: 3px;
+  background: #66FFFF;
+  margin-top: 20px;
 }
