@@ -1,7 +1,7 @@
 var form = new function() {
 
   this.instance = null;
-  this.template = "<div id=formHeading><h3>{{ title }}</h3></div><form><div id='form'>{{ inputs }}</div><hr><div id='actionBar'><button type='reset' id='resetBtn'>Cancel</button> <button type='submit' id='okBtn'>Ok</button></div></form>";
+  this.template = "<div id=formHeading><h3>{{ title }}</h3></div><form><div id='form'>{{ inputs }}</div><hr><div id='actionBar'><button type='submit' id='okBtn'>Ok</button><button type='reset' id='resetBtn'>Cancel</button> </div></form>";
 
   this.createInstance = function() {
     var form = document.createElement("div");
