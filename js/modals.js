@@ -23,7 +23,7 @@ var form = new function() {
   }
 
   this.renderFloatInput = function(json) {
-    floatInput = "<label><h4>" + json.label + "</h4></label><input id='formInput' type='number' value='" + json.value + "' id='float-input' required />";
+    floatInput = "<label><h4>" + json.label + "</h4></label><input id='formInput' type='number' step='any' value='" + json.value + "' id='float-input' required />";
     return floatInput
   }
 
