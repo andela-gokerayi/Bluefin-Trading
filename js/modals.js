@@ -1,12 +1,12 @@
 var modalDialog = (function() {
 
-  var methods = {}
-  var form = new function() {
+  var methods = {};
+  var Form = function() {
 
     this.instance = null;
     this.template = "<div class='formHeading'>{{ title }}</div><form class='formTemplate'><div class='formInputTemplate'>{{ inputs }}</div><div class='actionBar'><button type='submit' class='btn'>Ok</button><button type='reset' class='btn'>Cancel</button></div></form>";
-
-    this.createInstance = function() {
+  };
+    Form.prototype.createInstance = function() {
       var form = document.createElement("div");
       form.setAttribute("class", "modalForm");
       document.body.appendChild(form);
@@ -14,22 +14,23 @@ var modalDialog = (function() {
       this.instance = form;
     }
 
-    this.renderStringInput = function(json) {
+    Form.prototype.renderStringInput = function(json) {
       stringInput = "<label>" + json.label + "</label><input class='formInput' type='text' value='" + json.value + "' required />";
       return stringInput
     }
 
-    this.renderIntegerInput = function(json) {
+    Form.prototype.renderIntegerInput = function(json) {
       integerInput = "<label>" + json.label + "</label><input class='formInput' type='number' value='" + json.value + "'  required />";
       return integerInput
     }
 
-    this.renderFloatInput = function(json) {
+    Form.prototype.renderFloatInput = function(json) {
       floatInput = "<label>" + json.label + "</label><input class='formInput' type='number' step='any' value='" + json.value + "' required />";
       return floatInput
     }
 
-    this.render = function(json) {
+    Form.prototype.render = function(json) {
+      var self = this;
 
       if (!this.instance)
           this.createInstance();
@@ -42,17 +43,16 @@ var modalDialog = (function() {
       json.inputs.forEach(function(input) {
           switch(input.type) {
               case "float":
-                inputs += form.renderFloatInput(input);
+                inputs += self.renderFloatInput(input);
                 break
               case "integer":
-                inputs += form.renderIntegerInput(input);
+                inputs += self.renderIntegerInput(input);
                 break
               case "string":
               default:
-                inputs += form.renderStringInput(input);
+                inputs += self.renderStringInput(input);
                 break;
           }
-          console.log(inputs)
       })
 
       html = html.replace("{{ inputs }}", inputs);
@@ -60,7 +60,7 @@ var modalDialog = (function() {
       this.instance.innerHTML = html;
     }
 
-    this.destroy = function() {
+    Form.prototype.destroy = function() {
       if (this.instance)
           document.body.removeChild(this.instance);
       
@@ -68,9 +68,8 @@ var modalDialog = (function() {
     }
 
       methods.show = function(json) {
-
+        var form  = new Form(); 
         form.render(json);
       }
-  }
   return methods
 }());
