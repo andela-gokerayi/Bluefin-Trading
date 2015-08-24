@@ -1,4 +1,4 @@
-.modal {
+.modalForm {
   margin: 0 auto;
   height: 390px;
   width: 483px;
@@ -7,22 +7,14 @@
   margin-top: 30px;
 }
 
-#orderButton {
-  margin-left: 40%;
-  margin-top: 30px;
-  height: 30px;
-  width: 250px;
-  border-radius: 6px;
-  background: #0B1A3B;
-  color: #ffffff;
-  font-size: 20px;
-  font-family: 'Open Sans', sans-serif;
-}
-
-#formHeading {
+.formHeading {
   background: #0B1A3B;
   color: #FCFDFE;
   overflow: auto;
+  display: block;
+  font-size: 1.17em;
+  font-weight: bold;
+  height: 58px;
 }
 
 #formHeading h3 {
@@ -30,19 +22,20 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-#form {
-  overflow: auto;
+.formInputTemplate {
   height: 250px;
   overflow: scroll;
 }
 
-#form h4 {
+.formInputTemplate label {
   margin-left: 30px;
   font-family: 'Open Sans', sans-serif;
   margin-bottom: 0px;
+  display: block;
+  font-weight: bold;
 }
 
-#formInput {
+.formInput {
   position: relative;
   bottom: 26px;
   left: 200px;
@@ -52,31 +45,18 @@
   font-size: 15px;
 }
 
-hr {
-  margin: 0 auto;
-}
-
-#actionBar {
+.actionBar {
   background: #0B1A3B;
   color: #FCFDFE;
   overflow: auto;
   height:80px;
 }
 
-#resetBtn {
+.btn {
   width: 200px;
   height: 40px;
   border-radius: 3px;
   background: #66FFFF;
   margin-top: 20px;
   margin-left: 25px;
-}
-
-#okBtn {
-  width: 200px;
-  height: 40px;
-  border-radius: 3px;
-  background: #66FFFF;
-  margin-top: 20px;
-  margin-left:30px;
 }
