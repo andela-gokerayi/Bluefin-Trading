@@ -10,16 +10,15 @@
 .formHeading {
   background: #0B1A3B;
   color: #FCFDFE;
-  overflow: auto;
+  font-family: 'Open Sans', sans-serif;
   display: block;
-  font-size: 1.17em;
+  font-size: 1.70em;
   font-weight: bold;
   height: 58px;
 }
 
-#formHeading h3 {
-  margin-left: 30px;
-  font-family: 'Open Sans', sans-serif;
+.formTemplate{
+  margin-top: 18px;
 }
 
 .formInputTemplate {
@@ -37,7 +36,7 @@
 
 .formInput {
   position: relative;
-  bottom: 26px;
+  bottom: 18px;
   left: 200px;
   height: 30px;
   width: 250px;
